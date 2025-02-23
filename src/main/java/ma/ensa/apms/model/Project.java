@@ -15,6 +15,8 @@ public class Project {
     private Long id;
     private String nom;
     private String description;
+    @Enumerated(EnumType.STRING)
+    private Status status ;
 
     @Temporal(TemporalType.DATE)
     private Date dateDebut;
