@@ -1,24 +1,14 @@
 version: '3.8'
-
+#196.84.127.164
 services:
-  mysql:
-    image: mysql:8.0
-    environment:
-      MYSQL_ROOT_PASSWORD: achraf
-      MYSQL_DATABASE: apms
-    ports:
-      - "3306:3306"  # Map host port 3306 to container port 3306
-    networks:
-      - apms_network
-
   apms:
-    image: apms  # Replace with your apms image name
+    image: apms
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/apms
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: achraf
-    depends_on:
-      - mysql
+      SPRING_DATASOURCE_URL: jdbc:mysql://192.168.0.150:3306/amps?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: user
+      SPRING_DATASOURCE_PASSWORD: user
+    ports:
+      - "8080:8080"
     networks:
       - apms_network
 
