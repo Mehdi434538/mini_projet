@@ -3,9 +3,11 @@ package ma.ensa.apms.services;
 import lombok.AllArgsConstructor;
 import ma.ensa.apms.model.UserStory;
 import ma.ensa.apms.repository.UserStoryRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 @AllArgsConstructor
 public class UserStoryServiceImpl implements IUserStoryService{
     private UserStoryRepository userStoryRepository;

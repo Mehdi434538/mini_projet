@@ -3,9 +3,11 @@ package ma.ensa.apms.services;
 import lombok.AllArgsConstructor;
 import ma.ensa.apms.model.Epic;
 import ma.ensa.apms.repository.EpicRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 @AllArgsConstructor
 public class EpicServiceImpl implements IEpicService{
     private EpicRepository epicRepository;
